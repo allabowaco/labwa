@@ -1,0 +1,462 @@
+/* =========================================================
+   LABWA PRO — ULTRA PREMIUM THEMES SYSTEM v3.0
+   نظام ثيمات متكامل عالي الأداء مع 5 مستويات لونية واحترافية كاملة
+   ========================================================= */
+
+/* =========================================================
+   GLOBAL DESIGN TOKENS (Shared Layout & Structure)
+   ========================================================= */
+:root {
+    /* Layout & Dimensions */
+    --sidebar-width: 280px;
+    --topbar-height: 70px;
+
+    /* Typography Hierarchy */
+    --font-main: 'Tajawal', 'Segoe UI', system-ui, -apple-system, sans-serif;
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+    --font-weight-heavy: 900;
+
+    /* Advanced Border Radius */
+    --radius-xs: 6px;
+    --radius-sm: 10px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --radius-xl: 32px;
+    --radius-pill: 50rem;
+
+    /* Backdrop Blurs */
+    --blur-sm: 6px;
+    --blur-md: 12px;
+    --blur-lg: 24px;
+
+    /* Micro-Transitions (individualized for performance) */
+    --motion-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    --motion-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --motion-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --transition-bg: background-color var(--motion-normal), background var(--motion-normal);
+    --transition-color: color var(--motion-fast);
+    --transition-border: border-color var(--motion-normal), box-shadow var(--motion-normal);
+    --transition-all: all var(--motion-normal);
+
+    /* Universal Shadows Packs */
+    --shadow-flat: 0 0 0 1px rgba(0, 0, 0, 0.05);
+    --shadow-soft-sm: 0 4px 12px -2px rgba(0, 0, 0, 0.05), 0 2px 6px -1px rgba(0, 0, 0, 0.03);
+    --shadow-soft-md: 0 12px 24px -4px rgba(0, 0, 0, 0.08), 0 4px 12px -2px rgba(0, 0, 0, 0.04);
+    --shadow-soft-lg: 0 24px 48px -8px rgba(0, 0, 0, 0.12), 0 8px 24px -4px rgba(0, 0, 0, 0.06);
+}
+
+/* =========================================================
+   THEME 1 — LIGHT LUXURY (الأزرق النقي الملكي)
+   ========================================================= */
+:root,
+[data-theme="light"] {
+    /* 5 Primary Palette Degrees */
+    --primary-100: #eff6ff;
+    --primary-200: #bfdbfe;
+    --primary-500: #3b82f6;
+    --primary-600: #2563eb;
+    --primary-700: #1d4ed8;
+
+    /* 5 Secondary Palette Degrees */
+    --secondary-100: #f0fdf4;
+    --secondary-200: #bbf7d0;
+    --secondary-500: #22c55e;
+    --secondary-600: #16a34a;
+    --secondary-700: #15803d;
+
+    /* Backgrounds & Canvas */
+    --bg-main: radial-gradient(circle at top right, rgba(59, 130, 246, 0.06), transparent 40%), linear-gradient(135deg, #f4f7fe 0%, #f9fbff 60%, #f1f5f9 100%);
+    --bg-surface: #ffffff;
+    --bg-surface-flat: #f8fafc;
+    --bg-surface-glass: rgba(255, 255, 255, 0.85);
+
+    /* Typography & Text */
+    --text-main: #0f172a;
+    --text-secondary: #334155;
+    --text-tertiary: #475569;
+    --text-muted: #64748b;
+    --text-soft: #94a3b8;
+    --text-on-accent: #ffffff;
+
+    /* Borders & Dividers */
+    --border-color: rgba(37, 99, 235, 0.08);
+    --border-color-hover: rgba(37, 99, 235, 0.18);
+    --border-color-focus: rgba(37, 99, 235, 0.35);
+
+    /* Functional Elements Specs */
+    --card-shadow: var(--shadow-soft-md);
+    --card-shadow-hover: var(--shadow-soft-lg);
+    --input-shadow-focus: 0 0 0 4px rgba(37, 99, 235, 0.12);
+    --btn-shadow-glow: rgba(37, 99, 235, 0.25);
+
+    /* Tables Specifications */
+    --table-header-bg: linear-gradient(135deg, var(--primary-600), var(--primary-500));
+    --table-header-text: var(--text-on-accent);
+    --table-row-hover: rgba(37, 99, 235, 0.03);
+    --table-striped: rgba(248, 250, 252, 0.60);
+
+    /* Sidebar Pack */
+    --sidebar-bg: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+    --sidebar-text: rgba(255, 255, 255, 0.70);
+    --sidebar-text-hover: #ffffff;
+    --sidebar-active-bg: rgba(255, 255, 255, 0.08);
+    --sidebar-active-border: var(--primary-500);
+}
+
+/* =========================================================
+   THEME 2 — OBSIDIAN DARK (الأسود الفاخر والسيان النيون)
+   ========================================================= */
+[data-theme="dark"] {
+    --primary-100: #022c22;
+    --primary-200: #042f2e;
+    --primary-500: #00ffd1;
+    --primary-600: #00e5bc;
+    --primary-700: #00bfa3;
+
+    --secondary-100: #111c44;
+    --secondary-200: #1b255a;
+    --secondary-500: #3b82f6;
+    --secondary-600: #2563eb;
+    --secondary-700: #1d4ed8;
+
+    --bg-main: radial-gradient(circle at top right, rgba(0, 255, 209, 0.05), transparent 35%), linear-gradient(135deg, #030508 0%, #090d14 50%, #0d131f 100%);
+    --bg-surface: #0e1522;
+    --bg-surface-flat: #131b2e;
+    --bg-surface-glass: rgba(14, 21, 34, 0.85);
+
+    --text-main: #f8fafc;
+    --text-secondary: #cbd5e1;
+    --text-tertiary: #94a3b8;
+    --text-muted: #64748b;
+    --text-soft: #475569;
+    --text-on-accent: #011210;
+
+    --border-color: rgba(255, 255, 255, 0.06);
+    --border-color-hover: rgba(0, 255, 209, 0.16);
+    --border-color-focus: rgba(0, 255, 209, 0.30);
+
+    --card-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    --card-shadow-hover: 0 30px 70px rgba(0, 255, 209, 0.08);
+    --input-shadow-focus: 0 0 0 4px rgba(0, 255, 209, 0.12);
+    --btn-shadow-glow: rgba(0, 255, 209, 0.3);
+
+    --table-header-bg: linear-gradient(135deg, var(--primary-500), #00bcd4);
+    --table-header-text: var(--text-on-accent);
+    --table-row-hover: rgba(0, 255, 209, 0.03);
+    --table-striped: rgba(255, 255, 255, 0.01);
+
+    --sidebar-bg: linear-gradient(180deg, #020408 0%, #070b12 100%);
+    --sidebar-text: rgba(255, 255, 255, 0.65);
+    --sidebar-text-hover: var(--primary-500);
+    --sidebar-active-bg: rgba(0, 255, 209, 0.06);
+    --sidebar-active-border: var(--primary-500);
+}
+
+/* =========================================================
+   THEME 3 — ROYAL GOLD (الذهبي الملكي الملوكي)
+   ========================================================= */
+[data-theme="gold"] {
+    --primary-100: #fef9c3;
+    --primary-200: #fef08a;
+    --primary-500: #eab308;
+    --primary-600: #ca8a04;
+    --primary-700: #a16207;
+
+    --secondary-100: #fef2f2;
+    --secondary-200: #fee2e2;
+    --secondary-500: #ef4444;
+    --secondary-600: #dc2626;
+    --secondary-700: #b91c1c;
+
+    --bg-main: radial-gradient(circle at top right, rgba(202, 138, 4, 0.06), transparent 35%), linear-gradient(135deg, #fdfaf2 0%, #fefdf9 60%, #f7f3e3 100%);
+    --bg-surface: #ffffff;
+    --bg-surface-flat: #fffdf6;
+    --bg-surface-glass: rgba(255, 255, 255, 0.90);
+
+    --text-main: #3a2a00;
+    --text-secondary: #5c4300;
+    --text-tertiary: #715505;
+    --text-muted: #85691a;
+    --text-soft: #a68b3e;
+    --text-on-accent: #ffffff;
+
+    --border-color: rgba(202, 138, 4, 0.12);
+    --border-color-hover: rgba(202, 138, 4, 0.25);
+    --border-color-focus: rgba(202, 138, 4, 0.40);
+
+    --card-shadow: var(--shadow-soft-md);
+    --card-shadow-hover: var(--shadow-soft-lg);
+    --input-shadow-focus: 0 0 0 4px rgba(202, 138, 4, 0.12);
+    --btn-shadow-glow: rgba(202, 138, 4, 0.25);
+
+    --table-header-bg: linear-gradient(135deg, var(--primary-600), var(--primary-500));
+    --table-header-text: var(--text-on-accent);
+    --table-row-hover: rgba(202, 138, 4, 0.03);
+    --table-striped: rgba(202, 138, 4, 0.01);
+
+    --sidebar-bg: linear-gradient(180deg, #1c1400 0%, #2d2001 100%);
+    --sidebar-text: rgba(255, 248, 220, 0.75);
+    --sidebar-text-hover: var(--primary-500);
+    --sidebar-active-bg: rgba(255, 255, 255, 0.06);
+    --sidebar-active-border: var(--primary-500);
+}
+
+/* =========================================================
+   THEME 4 — EMERALD CASH (الأخضر الاستثماري والمالي)
+   ========================================================= */
+[data-theme="emerald"] {
+    --primary-100: #d1fae5;
+    --primary-200: #a7f3d0;
+    --primary-500: #10b981;
+    --primary-600: #059669;
+    --primary-700: #047857;
+
+    --secondary-100: #ecfeff;
+    --secondary-200: #cffafe;
+    --secondary-500: #06b6d4;
+    --secondary-600: #0097b2;
+    --secondary-700: #0369a1;
+
+    --bg-main: radial-gradient(circle at top right, rgba(16, 185, 129, 0.05), transparent 40%), linear-gradient(135deg, #f2faf6 0%, #f9fffb 60%, #ebf5ee 100%);
+    --bg-surface: #ffffff;
+    --bg-surface-flat: #f4fbf7;
+    --bg-surface-glass: rgba(255, 255, 255, 0.88);
+
+    --text-main: #062f22;
+    --text-secondary: #0f4e3a;
+    --text-tertiary: #115e59;
+    --text-muted: #4b5563;
+    --text-soft: #9ca3af;
+    --text-on-accent: #ffffff;
+
+    --border-color: rgba(16, 185, 129, 0.10);
+    --border-color-hover: rgba(16, 185, 129, 0.22);
+    --border-color-focus: rgba(16, 185, 129, 0.35);
+
+    --card-shadow: var(--shadow-soft-md);
+    --card-shadow-hover: var(--shadow-soft-lg);
+    --input-shadow-focus: 0 0 0 4px rgba(16, 185, 129, 0.12);
+    --btn-shadow-glow: rgba(16, 185, 129, 0.25);
+
+    --table-header-bg: linear-gradient(135deg, var(--primary-600), var(--primary-500));
+    --table-header-text: var(--text-on-accent);
+    --table-row-hover: rgba(16, 185, 129, 0.03);
+    --table-striped: rgba(244, 251, 247, 0.7);
+
+    --sidebar-bg: linear-gradient(180deg, #042419 0%, #0a3a29 100%);
+    --sidebar-text: rgba(255, 255, 255, 0.70);
+    --sidebar-text-hover: var(--primary-500);
+    --sidebar-active-bg: rgba(255, 255, 255, 0.06);
+    --sidebar-active-border: var(--primary-500);
+}
+
+/* =========================================================
+   THEME 5 — CYBER VIOLET (البنفسجي السيبراني المستقبلي)
+   ========================================================= */
+[data-theme="purple"] {
+    --primary-100: #ede9fe;
+    --primary-200: #ddd6fe;
+    --primary-500: #8b5cf6;
+    --primary-600: #7c3aed;
+    --primary-700: #6d28d9;
+
+    --secondary-100: #fdf2f8;
+    --secondary-200: #fce7f3;
+    --secondary-500: #ec4899;
+    --secondary-600: #db2777;
+    --secondary-700: #be185d;
+
+    --bg-main: radial-gradient(circle at top right, rgba(139, 92, 246, 0.05), transparent 40%), linear-gradient(135deg, #f6f3ff 0%, #faf8ff 60%, #f1ebfc 100%);
+    --bg-surface: #ffffff;
+    --bg-surface-flat: #faf7ff;
+    --bg-surface-glass: rgba(255, 255, 255, 0.88);
+
+    --text-main: #2e1065;
+    --text-secondary: #4c1d95;
+    --text-tertiary: #5b21b6;
+    --text-muted: #6b7280;
+    --text-soft: #a1a1aa;
+    --text-on-accent: #ffffff;
+
+    --border-color: rgba(139, 92, 246, 0.10);
+    --border-color-hover: rgba(139, 92, 246, 0.22);
+    --border-color-focus: rgba(139, 92, 246, 0.35);
+
+    --card-shadow: var(--shadow-soft-md);
+    --card-shadow-hover: var(--shadow-soft-lg);
+    --input-shadow-focus: 0 0 0 4px rgba(139, 92, 246, 0.12);
+    --btn-shadow-glow: rgba(139, 92, 246, 0.25);
+
+    --table-header-bg: linear-gradient(135deg, var(--primary-600), var(--primary-500));
+    --table-header-text: var(--text-on-accent);
+    --table-row-hover: rgba(139, 92, 246, 0.03);
+    --table-striped: rgba(250, 247, 255, 0.7);
+
+    --sidebar-bg: linear-gradient(180deg, #170a2c 0%, #261148 100%);
+    --sidebar-text: rgba(255, 255, 255, 0.70);
+    --sidebar-text-hover: var(--primary-500);
+    --sidebar-active-bg: rgba(255, 255, 255, 0.06);
+    --sidebar-active-border: var(--primary-500);
+}
+
+
+/* =========================================================
+   APPLICATION STRUCTURAL ELEMENTS STYLING
+   ========================================================= */
+
+/* Body & Layout Canvas */
+body {
+    background: var(--bg-main);
+    color: var(--text-main);
+    font-family: var(--font-main);
+    transition: var(--transition-bg), var(--transition-color);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Luxury Premium Cards */
+.card-custom {
+    background: var(--bg-surface-glass);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    box-shadow: var(--card-shadow);
+    backdrop-filter: blur(var(--blur-md));
+    -webkit-backdrop-filter: blur(var(--blur-md));
+    padding: 1.75rem;
+    transition: transform var(--motion-normal), border-color var(--motion-normal), box-shadow var(--motion-normal);
+}
+.card-custom:hover {
+    transform: translateY(-4px);
+    border-color: var(--border-color-hover);
+    box-shadow: var(--card-shadow-hover);
+}
+
+/* Master Inputs & Select Components */
+.form-control, .form-select {
+    background-color: var(--bg-surface) !important;
+    border: 1px solid var(--border-color) !important;
+    color: var(--text-main) !important;
+    border-radius: var(--radius-sm);
+    padding: 0.75rem 1rem;
+    font-weight: var(--font-weight-medium);
+    transition: var(--transition-border);
+}
+.form-control:hover, .form-select:hover {
+    border-color: var(--border-color-hover) !important;
+}
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-500) !important;
+    box-shadow: var(--input-shadow-focus) !important;
+    background-color: var(--bg-surface) !important;
+}
+
+/* Ultra-Premium Unified Buttons */
+.btn-modern {
+    border-radius: var(--radius-sm);
+    padding: 0.8rem 1.75rem;
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0.3px;
+    transition: var(--transition-all);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border: none;
+}
+.btn-modern.btn-success {
+    background: linear-gradient(135deg, var(--secondary-600), var(--secondary-500));
+    color: var(--text-on-accent);
+}
+.btn-modern.btn-success:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px var(--btn-shadow-glow);
+    filter: brightness(1.08);
+}
+
+/* Advanced High-Performance Tables */
+.table {
+    --bs-table-bg: transparent !important;
+    --bs-table-hover-bg: var(--table-row-hover) !important;
+    color: var(--text-main) !important;
+    border-color: var(--border-color) !important;
+    vertical-align: middle;
+}
+.table thead, #tableHeader, #reportHeader {
+    background: var(--table-header-bg) !important;
+    color: var(--table-header-text) !important;
+}
+.table thead th {
+    padding: 1.1rem 1rem;
+    font-weight: var(--font-weight-bold);
+    border: none;
+}
+.table tbody tr {
+    transition: background-color var(--motion-fast);
+}
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: var(--table-striped) !important;
+}
+
+/* Dynamic Interactive Badges */
+.badge {
+    padding: 0.5rem 1.1rem;
+    font-weight: var(--font-weight-bold);
+    border-radius: var(--radius-pill);
+    transition: var(--transition-bg);
+}
+.badge.bg-primary {
+    background-color: var(--primary-100) !important;
+    color: var(--primary-600) !important;
+}
+
+/* Luxury Sidebar Implementation */
+.sidebar {
+    background: var(--sidebar-bg);
+    width: var(--sidebar-width);
+    transition: var(--transition-bg);
+    border-left: 1px solid rgba(255, 255, 255, 0.05);
+}
+.sidebar button {
+    color: var(--sidebar-text);
+    font-weight: var(--font-weight-medium);
+    padding: 0.85rem 1.5rem;
+    border-radius: var(--radius-sm);
+    transition: var(--transition-all);
+    background: transparent;
+    border: 1px solid transparent;
+}
+.sidebar button:hover {
+    color: var(--sidebar-text-hover);
+    background: var(--sidebar-active-bg);
+}
+.sidebar button.active-view, 
+.sidebar button.active-system {
+    color: var(--sidebar-text-hover) !important;
+    background: var(--sidebar-active-bg) !important;
+    border-right: 4px solid var(--sidebar-active-border) !important;
+}
+
+/* Premium Top Bar Component */
+.top-bar {
+    background: var(--bg-surface-glass);
+    border-bottom: 1px solid var(--border-color);
+    backdrop-filter: blur(var(--blur-md));
+    -webkit-backdrop-filter: blur(var(--blur-md));
+    transition: var(--transition-bg), var(--transition-border);
+}
+
+/* Typography Overrides */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-main);
+    font-weight: var(--font-weight-heavy);
+}
+.text-muted {
+    color: var(--text-muted) !important;
+}
+.text-secondary {
+    color: var(--text-secondary) !important;
+}
